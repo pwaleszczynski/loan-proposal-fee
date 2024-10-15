@@ -10,9 +10,8 @@ use PragmaGoTech\Interview\Strategy\FeeCalculatorStrategy;
 class AppFeeCalculator implements FeeCalculator
 {
     public function __construct(
-        private FeeCalculatorStrategy $calculatorStrategy,
-    )
-    {
+        private readonly FeeCalculatorStrategy $calculatorStrategy,
+    ) {
     }
 
     public function calculate(LoanProposal $application): float
